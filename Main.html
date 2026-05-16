@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Page Button</title>
+    <link rel="stylesheet" href="Design.css">
+    <script src="script.js"></script>
+</head>
+<body id="ina" onload="return f1()">
+    <button id="showPageButton">Show Full Page</button>
+
+    <div  id="pageContent">
+        <div class="main">
+             <h1 class="title">BETA REPOSITORY ORIGINALLY PUBLISHED IN 2023 TO LEARN GITHUB</h1>
+        </div>
+         <div class="container">
+        <pre id="test">JavaScript Manipulation</pre>
+    </div>
+    <div class="options">
+          <select id="colorSelector">
+        <option value="">Select a color </option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="yellow">Yellow</option>
+        <option value="purple">Purple</option>
+        <option value="grey">Grey</option>
+        <option value="Black">Black</option>
+        <option value="purple">Purple</option>
+        <option value="White">Revert</option>
+        
+    </select>
+    </div>
+    </div>
+    </div>
+   
+      <script>
+         document.addEventListener('DOMContentLoaded', () => {
+            const button = document.getElementById('showPageButton');
+            const pageContent = document.getElementById('pageContent');
+
+            button.addEventListener('click', () => {
+               
+                pageContent.style.display = 'block';
+
+              
+                button.remove();
+            });
+        });
+           
+            document.addEventListener('DOMContentLoaded', () => {
+            const colorSelector = document.getElementById('colorSelector');
+
+            colorSelector.addEventListener('change', () => {
+               
+                const selectedColor = colorSelector.value;
+
+    
+                if (selectedColor) {
+                    document.body.style.backgroundColor = selectedColor;
+                } else {
+                    document.body.style.backgroundColor = '';
+
+                }
+            });
+        });
+      
+       
+    </script>
+  
+</body>
+</html>
