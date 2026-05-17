@@ -37,9 +37,7 @@ transform: scale(1.2);
     transform: scale(1.2);
     color:black;
 }
-#pageContent {
-    display: none;
-}
+/**/
 
 /* Button styles */
 #showPageButton {
